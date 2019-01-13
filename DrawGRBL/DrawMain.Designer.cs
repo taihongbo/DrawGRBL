@@ -112,11 +112,6 @@
             0,
             0,
             0});
-            this.suspend.Minimum = new decimal(new int[] {
-            200,
-            0,
-            0,
-            0});
             this.suspend.Name = "suspend";
             this.suspend.Size = new System.Drawing.Size(61, 21);
             this.suspend.TabIndex = 22;
@@ -220,8 +215,6 @@
             // 
             // serialPort1
             // 
-            this.serialPort1.ReadBufferSize = 128;
-            this.serialPort1.WriteBufferSize = 64;
             this.serialPort1.ErrorReceived += new System.IO.Ports.SerialErrorReceivedEventHandler(this.serialPort1_ErrorReceived);
             this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
             // 
@@ -347,6 +340,7 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
             this.pictureBox1.Resize += new System.EventHandler(this.pictureBox1_Resize);
             // 
@@ -404,11 +398,11 @@
             // 
             this.txtMacro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtMacro.Location = new System.Drawing.Point(13, 407);
+            this.txtMacro.Location = new System.Drawing.Point(13, 383);
             this.txtMacro.Multiline = true;
             this.txtMacro.Name = "txtMacro";
             this.txtMacro.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtMacro.Size = new System.Drawing.Size(167, 79);
+            this.txtMacro.Size = new System.Drawing.Size(167, 103);
             this.txtMacro.TabIndex = 27;
             this.txtMacro.Text = resources.GetString("txtMacro.Text");
             // 
@@ -456,6 +450,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.groupBox1);
+            this.DoubleBuffered = true;
             this.Name = "DrawMain";
             this.Text = "DrawMain";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DrawMain_FormClosed);
