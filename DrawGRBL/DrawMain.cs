@@ -360,8 +360,8 @@ namespace DrawGRBL
         {
             if (comm.Name == "Delayed")
             {
-                // this.GoPoint(10, comm.X , 0);
-                this.Stop(comm.X * 1000); 
+                this.GoPoint(10, comm.X , 0);
+                //this.Stop(comm.X * 1000); 
             }
             else if (comm.Name == "MouseDown")
             {
@@ -638,7 +638,7 @@ namespace DrawGRBL
                         comm.Type = 9;
                         comm.X = x;
                         comm.Y = y;
-                        //this.ExecutiveComm(comm);
+                        this.ExecutiveComm(comm);
                     }
 
                 }
@@ -672,7 +672,7 @@ namespace DrawGRBL
                     comm.Type = 9;
                     comm.X = x;
                     comm.Y = y;
-                    //this.ExecutiveComm(comm);
+                    this.ExecutiveComm(comm);
                 }
             }
         }
@@ -714,7 +714,7 @@ namespace DrawGRBL
                             comm.Type = 9;
                             comm.X = x;
                             comm.Y = y;
-                            //this.ExecutiveComm(comm);
+                            this.ExecutiveComm(comm);
                         }
 
                     }
